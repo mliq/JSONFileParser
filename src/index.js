@@ -30,3 +30,19 @@ fs.writeFile('./data/combinedItems.json', JSON.stringify(combinedItems), (err, d
   }
   console.log(`${combinedItems.length} Items written to combinedItems.json`);
 });
+
+let result;
+try {
+  result = json2csv({ data: combinedItems });
+  console.log(result);
+} catch (err) {
+  // Errors are thrown for bad options, or if the data is empty and no fields are provided.
+  // Be sure to provide fields if it is possible that your data array will be empty.
+  console.error(err);
+}
+fs.writeFile('./data/combinedItems.csv', result, (err, data) => {
+  if (err) {
+    return console.log(err);
+  }
+  console.log(`${combinedItems.length} Items written to combinedItems.csv`);
+});
