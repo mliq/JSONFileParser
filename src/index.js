@@ -16,7 +16,7 @@ const extractItemResponses = (responseArray) => responseArray.filter(
 );
 
 const extractItems = (itemResponses) => itemResponses.map(
-    (itemResponseObject) => itemResponseObject.Item
+    (itemResponseObject) => itemResponseObject.Item.Fields[0]
 );
 
 const day1Items = extractItems(extractItemResponses(day1));
@@ -32,8 +32,9 @@ fs.writeFile('./data/combinedItems.json', JSON.stringify(combinedItems), (err, d
 });
 
 let result;
+const fields = ['Name', 'Id', 'Rarity', 'Description'];
 try {
-  result = json2csv({ data: combinedItems });
+  result = json2csv({ data: combinedItems, fields });
   console.log(result);
 } catch (err) {
   // Errors are thrown for bad options, or if the data is empty and no fields are provided.
