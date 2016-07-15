@@ -1,20 +1,22 @@
 var fs = require('fs');
-var gameLog = require('./data/game_log');
 var _ = require('lodash');
 
-// import gameLog from './src/data/game_log';
+const { day1 } = require('./data/cleaned/day1Array');
+const { day2 } = require('./data/cleaned/day2Array');
 
-// console.log(gameLog);
-
-
-/*
-var logfile = fs.readFileSync(
-    'src/data/the_game_log.array',
-    'utf8',
-    (err, data) => JSON.parse(data)
+const extractItemResponses = (responseArray) => responseArray.filter(
+    (responseObject) => {
+        if (_.get(responseObject, 'Item', null)) {
+            return true;
+        }
+    }
 );
 
-console.log(logfile);
-var arrayToParse = [...logfile]
-// console.log(arrayToParse);
-*/
+const extractItems = (itemResponses) => itemResponses.map(
+    (itemResponseObject) => itemResponseObject.Item
+);
+
+const day1Items = extractItems(extractItemResponses(day1));
+const day2Items = extractItems(extractItemResponses(day2));
+
+fs.writeFile('test', JSON.stringify(day1Items));
