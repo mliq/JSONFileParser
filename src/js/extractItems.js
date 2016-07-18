@@ -1,4 +1,4 @@
-var _ = require('lodash');
+const _ = require('lodash');
 
 module.exports = function extractItems(dataToParse) {
     const extractItemResponses = (responseArray) => responseArray.filter(
@@ -9,9 +9,9 @@ module.exports = function extractItems(dataToParse) {
         }
     );
 
-    const extractItems = (itemResponses) => itemResponses.map(
+    const extractItemsFromResponseArray = (itemResponses) => itemResponses.map(
         (itemResponseObject) => itemResponseObject.Item.Fields[0]
     );
 
-    return extractItems(extractItemResponses(dataToParse));
-}
+    return extractItemsFromResponseArray(extractItemResponses(dataToParse));
+};

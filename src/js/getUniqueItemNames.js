@@ -1,4 +1,4 @@
-var _ = require('lodash');
+const _ = require('lodash');
 
 module.exports = function getUniqueItemNames(dataToParse) {
     const result = [];
@@ -6,4 +6,4 @@ module.exports = function getUniqueItemNames(dataToParse) {
     dataToParse.forEach((item) => result.push(item.Name));
 
     return _.uniq(result);
-}
+};

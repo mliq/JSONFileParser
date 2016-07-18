@@ -1,5 +1,3 @@
-var _ = require('lodash');
-
 const GOOD_ITEM_NAMES = [
     // 'Buffalo'
     // 'Pip-Boy',
@@ -34,5 +32,5 @@ const GOOD_ITEM_NAMES = [
 ];
 
 module.exports = function getGoodItems(dataToParse) {
-    return dataToParse.filter((item) => (GOOD_ITEM_NAMES.indexOf(item.Name) > -1))
-}
+    return dataToParse.filter((item) => (GOOD_ITEM_NAMES.indexOf(item.Name) > -1));
+};

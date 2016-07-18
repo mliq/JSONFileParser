@@ -1,5 +1,5 @@
-var fs = require('fs');
-var json2csv = require('json2csv');
+const fs = require('fs');
+const json2csv = require('json2csv');
 
 module.exports = function CSVProcessor(dataToParse, fileName) {
     //
