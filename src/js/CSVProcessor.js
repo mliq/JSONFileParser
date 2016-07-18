@@ -29,7 +29,7 @@ module.exports = function CSVProcessor(dataToParse, fileName) {
     //
     // Write the CSV
     //
-    fs.writeFile(`${fileName}.csv`, CSVOutput, (err, data) => {
+    fs.writeFile(`src/data/${fileName}.csv`, CSVOutput, (err, data) => {
         if (err) {
             return console.log(err);
         }

@@ -14,6 +14,7 @@ const { day3 } = require('./data/cleaned/day3Array');
 const day1Items = extractItems(day1);
 const day2Items = extractItems(day2);
 const day3Items = extractItems(day3);
+
 // Combine items to one array
 const combinedItems = [...day1Items, ...day2Items, ...day3Items];
 
@@ -25,4 +26,4 @@ useItems(goodItems);
 // const uniqueItems = getUniqueItemNames(combinedItems);
 
 // Write items to CSV
-CSVProcessor(combinedItems, 'combinedItems3');
+CSVProcessor(combinedItems, 'combinedItems');
