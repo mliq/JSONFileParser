@@ -4,6 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "start": "sh ./src/bash/the_game.sh",
+    "quest": "sh ./src/bash/quest.sh",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",

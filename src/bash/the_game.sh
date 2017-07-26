@@ -1,6 +1,8 @@
 #!/bin/bash
+apikey='YOUR KEY HERE';
+
 while true; do
     sleep 1
-    curl -X POST -H "apikey: fad7f5c2-703c-49f0-bffa-998486e35221" -H "Cache-Control: no-cache" -H "Postman-Token: 40678195-1e5e-775e-202f-78708ac32809" -d '' "http://thegame.nerderylabs.com:1337/points" >> "the_game.log"
-    printf ",\n" >> "day3.log"
+    curl -X POST -m 1 -H "apikey: "$apikey -H "Cache-Control: no-cache" -d "" -H "Content-Length: 0" "http://nerdquest.nerderylabs.com:1337/points" >> "year2_day1.log"
+    printf ",\n" >> "year2_day1.log"
 done

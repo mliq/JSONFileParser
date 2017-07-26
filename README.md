@@ -1,7 +1,19 @@
 # JSONFileParser
 
-Node JSON file parser and utilities to play The Game.
+Node JSON file parser and utilities to play NerdQuest.
 
+## Quickstart:
+
+1. open `src/bash/the_game.sh`
+2. replace `YOUR KEY HERE` with your API key.
+3. run `npm run start`
+4. monitor the log file
+
+quest.sh and use_item.sh not fully working yet but you can probably figure it out... Or I will update soon.
+
+----
+
+### 1.0 release notes (may be outdated)
 
 Point gathering and items gathered into log files using bash script at `src/bash/the_game.sh`. Manual **use item** script also located at `src/bash/use_item.sh`.
 
