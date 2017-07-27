@@ -21,7 +21,10 @@ This is new in NerdQuest and I don't quite yet know what it does. But you can ru
 
 ### <a name="strategy-3"></a>Strategy 3 - Use Items
 
-To be documented and updated soon, see below for some explanation of last year's functionality (which has not been updated yet).
+To be documented and updated soon how you can automate this, see below for some explanation of last year's functionality (which has not been updated yet). But for now, you have these instructions: 
+>You can use items by POSTing them to `/items/use/{itemid}?target={target-userid}`. 
+
+>Not all items accept targets. Some will only be used on yourself, and some auto-target.
 
 ----
 
